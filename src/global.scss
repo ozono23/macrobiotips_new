@@ -24,3 +24,103 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=DM+Sans&family=Padauk&Electrolize&display=swap');
+
+.limit-size{
+    max-width: 500px;
+    margin: auto;
+}
+
+.middle{
+    display: grid;
+    place-items: center;
+    align-content: center;
+    height: 100%;
+}
+
+.flex{
+    display: flex;
+    &.center{
+        align-items: center;
+    }
+}
+
+.center{
+    text-align: center;
+}
+
+.full {
+    width: 100%;
+}
+.half {
+    width: 50%;
+}
+
+a, .click{
+    cursor: pointer;
+}
+
+ion-toast{
+    --border-radius: 10px;
+    text-align: center;
+    font-size: 15px;
+        
+    &.simple{
+        --background: rgba(68, 68, 68, 0.9);	
+    }
+    &.error{
+        --background: rgba(174, 49, 0, 0.9);
+    }
+}
+
+.input-icon-wrapper{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    
+    ion-icon{
+        font-size: 1.2rem;
+        color: var(--ion-color-primary);
+        padding: 5px;
+        cursor: pointer;
+    }
+}
+
+ion-card{
+    border-radius: 10px;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.11), 
+              0 2px 2px rgba(0,0,0,0.11), 
+              0 4px 4px rgba(0,0,0,0.11), 
+              0 6px 8px rgba(0,0,0,0.11);
+}
+
+// .title{
+//     font-size: 23px;
+//     font-weight: 600;
+//     letter-spacing: 1px;
+//     color: var(--ion-color-dark);
+//     margin: 10px 0 15px 0;
+// }
+
+// .subtitle{
+//     font-size: 17px;
+//     font-weight: 500;
+//     letter-spacing: .7px;
+//     color: var(--ion-color-dark);
+//     opacity: .7;
+//     margin: -7px 0 15px 0;
+// }
+
+.chart {
+    margin: 0 auto;
+    text-align: -webkit-center;
+}
+
+ion-card-header{
+    font-family: 'Arvo', serif;
+    // ion-card-title{
+    //     --color: var(--ion-color-primary);
+    // }
+}
+
