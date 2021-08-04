@@ -6,10 +6,33 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+
+  <ion-tabs>
+    <ion-list>
+      <ion-item *ngFor="let dato of ListaRecetas" routerDirection="root" [routerLink]="['/folder/receta']"> 
+        <ion-img [src]="dato.imagen1"></ion-img>
+        <p>&nbsp;&nbsp;{{ dato.NOMBRE }}</p>
+       
+      </ion-item>
+    </ion-list>
+    
+    <!-- Tab bar -->
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button>
+        <ion-icon name="person" (click)="cargarRecetas(1)"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button>
+        <ion-icon name="add" (click)="cargarRecetas(2)"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button>
+      
+        <ion-icon name="airplane-outline" (click)="cargarRecetas(3)"></ion-icon>
+      </ion-tab-button>
+      <ion-tab-button>
+        <ion-icon name="home" (click)="cargarRecetas(4)"></ion-icon>
+      </ion-tab-button>
+     
+    </ion-tab-bar>
+  </ion-tabs>
 </ion-content>

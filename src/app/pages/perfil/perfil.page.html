@@ -1,0 +1,456 @@
+
+<ion-toolbar>
+
+  <ion-title center>Mi perfil</ion-title>
+  <ion-buttons slot="end">
+    <ion-menu-button autoHide="false"></ion-menu-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content padding center>
+ 
+  <ion-icon name="cube"></ion-icon>
+  <ion-title ><ion-icon name="tennisball-outline" ></ion-icon>Naturaleza Yin Yang</ion-title>
+  
+  <ion-range min="-100" max="100" step="1" snaps="true" ticks="true" disabled="true" name="naturalezaYy"></ion-range>
+
+  <ion-slides pager="true" [options]="slideOpts">
+
+    <ion-slide >
+      <ion-card>
+        <ion-card-title><ion-label >Constitución</ion-label></ion-card-title>
+        <ion-card-content>
+            <ion-radio-group name="perfil.sexo">
+              <ion-label>Sexo</ion-label>
+              <ion-item>
+              <ion-label>Masculino</ion-label>
+              <ion-radio slot="start" value="Masculino"></ion-radio>
+              </ion-item>
+              <ion-item>
+              <ion-label>Femenino</ion-label>
+              <ion-radio slot="start" value="Femenino"></ion-radio>
+              </ion-item>
+            </ion-radio-group>
+            <ion-item>
+
+            </ion-item>
+              <ion-label>Edad</ion-label>
+              <ion-select name="perfil.edad" >
+               <ion-select-option *ngFor="let edad of edades" value={{edad}}>{{edad}}</ion-select-option>
+              </ion-select>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-list-header><ion-label>Fisiología (1 de 2)</ion-label></ion-list-header>
+           
+            <ion-label> Debil - Fuerte</ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.fisiologia1"></ion-range>
+
+           <ion-label>Estatura Alto - Bajo</ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.fisiologia2"></ion-range>
+
+            <ion-label> Estructura Ósea Grácil-Robusta</ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.fisiologia3"></ion-range>
+         </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-list-header><ion-label>Fisiología (2 de 2)</ion-label></ion-list-header>
+           
+            <ion-label> Musculatura Flácida - Toníficada</ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.fisiologia4"></ion-range>
+
+            <ion-label> Delgadez - Sobrepeso</ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.fisiologia5"></ion-range>
+         </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-list-header><ion-label>Personalidad (1 de 3)</ion-label></ion-list-header>
+           
+            <ion-label> Sosegada - Inquieta</ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.personalidad1"></ion-range>
+
+           <ion-label> Pasiva - Activa</ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.personalidad2"></ion-range>
+
+            <ion-label> Mente Enfocada - Dispersa</ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.personalidad3"></ion-range>
+         </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-list-header><ion-label>Personalidad (2 de 3)</ion-label></ion-list-header>
+
+            <ion-label> Intuitiva - Lógica </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.personalidad4"></ion-range>
+
+            <ion-label> Negativa - Positiva </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.personalidad5"></ion-range>
+
+            <ion-label> Introvertida - Extrovertida </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.personalidad6"></ion-range>
+         </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-list-header><ion-label>Personalidad (3 de 3)</ion-label></ion-list-header>
+
+            <ion-label> Complaciente - Exigente </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.personalidad7"></ion-range>
+
+            <ion-label> Femenina - Masculina </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.personalidad8"></ion-range>
+         </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-content>
+          <ion-list>
+            <ion-list-header><ion-label>Hábito Alimentario</ion-label></ion-list-header>
+     
+              <ion-label>Omnívoro</ion-label>
+              <ion-select name="perfil.habitoalimentario" >
+               <ion-select-option *ngFor="let op1 of omni" value={{op1.id}}>{{op1.valor}}</ion-select-option>
+              </ion-select>
+
+              <ion-label>Vegetariano</ion-label>
+              <ion-select name="perfil.habitoalimentario" >
+               <ion-select-option *ngFor="let op2 of vege" value={{op2.id}}>{{op2.valor}}</ion-select-option>
+              </ion-select>
+
+              <ion-label> ¿Qué actividad física realiza?</ion-label>
+              <ion-card-subtitle>Sedentario - Activo</ion-card-subtitle>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.actividad"></ion-range>
+            
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-content>
+         
+            <ion-card-title><ion-label>Factores Ambientales</ion-label></ion-card-title>
+              <ion-label>País y Latitud</ion-label>
+              <ion-select name="perfil.pais" >
+               <ion-select-option *ngFor="let op3 of pais" value={{op3.id}}>{{op3.valor}}</ion-select-option>
+              </ion-select>
+              <ion-card-subtitle>Factores Climáticos a los que se ve expuesto</ion-card-subtitle>
+              <ion-label> Humedad - Sequedad Ambiental </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.humedad"></ion-range>
+         
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-content>
+          <ion-card-subtitle>Factores Climáticos a los que se ve expuesto</ion-card-subtitle>
+          <ion-radio-group name="perfil.climacalor">
+            <ion-label>Calor extremo</ion-label>
+            <ion-row>
+              <ion-col>
+              <ion-item>
+              <ion-label>Invierno</ion-label>
+              <ion-radio item-left value="Invierno"></ion-radio>
+             </ion-item>
+            </ion-col>
+            <ion-col>
+             <ion-item>
+             <ion-label>Primavera</ion-label>
+             <ion-radio item-left value="Primavera"></ion-radio>
+             </ion-item>
+            </ion-col>
+             <ion-col>
+             <ion-item>
+              <ion-label>Verano</ion-label>
+              <ion-radio item-left value="Verano"></ion-radio>
+              </ion-item>
+            </ion-col>
+              <ion-col>
+              <ion-item>
+              <ion-label>Verano Tardío</ion-label>
+              <ion-radio item-left value="Verano Tardío"></ion-radio>
+              </ion-item>
+            </ion-col>
+              <ion-col>
+              <ion-item>
+              <ion-label>Otoño</ion-label>
+              <ion-radio item-left value="Otoño"></ion-radio>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          </ion-radio-group>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-content>
+          <ion-card-subtitle>Factores Climáticos a los que se ve expuesto</ion-card-subtitle>
+          <ion-radio-group name="perfil.climafrio">
+            <ion-label>Calor extremo</ion-label>
+            <ion-row>
+              <ion-col>
+              <ion-item>
+              <ion-label>Invierno</ion-label>
+              <ion-radio item-left value="Invierno"></ion-radio>
+             </ion-item>
+            </ion-col>
+            <ion-col>
+             <ion-item>
+             <ion-label>Primavera</ion-label>
+             <ion-radio item-left value="Primavera"></ion-radio>
+             </ion-item>
+            </ion-col>
+             <ion-col>
+             <ion-item>
+              <ion-label>Verano</ion-label>
+              <ion-radio item-left value="Verano"></ion-radio>
+              </ion-item>
+            </ion-col>
+              <ion-col>
+              <ion-item>
+              <ion-label>Verano Tardío</ion-label>
+              <ion-radio item-left value="Verano Tardío"></ion-radio>
+              </ion-item>
+            </ion-col>
+              <ion-col>
+              <ion-item>
+              <ion-label>Otoño</ion-label>
+              <ion-radio item-left value="Otoño"></ion-radio>
+              </ion-item>
+            </ion-col>
+          </ion-row>
+          </ion-radio-group>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+
+    <ion-slide >
+      <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-list-header><ion-label>Sintomatología (1 de 4)</ion-label></ion-list-header>
+
+            <ion-label> Presión Baja - Alta </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma01"></ion-range>
+
+            <ion-label> Sensación Cuerpo Frío - Caliente </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma02"></ion-range>
+
+            <ion-label> Cansancio - Hiperactividad </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma03"></ion-range>
+         </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-list-header><ion-label>Sintomatología (2 de 4)</ion-label></ion-list-header>
+
+            <ion-label> Líbido Bajo - Alto </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma04"></ion-range>
+
+            <ion-label> Digestión Débil - Fuerte </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma05"></ion-range>
+
+            <ion-label> Apetito Poco - Mucho </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma06"></ion-range>
+         </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-list-header><ion-label>Sintomatología (3 de 4)</ion-label></ion-list-header>
+
+            <ion-label> Propensión Diarria - Estreñimiento </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma07"></ion-range>
+
+            <ion-label> Voz Baja/Débil - Alta/Fuerte </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma08"></ion-range>
+
+            <ion-label> Semblante Pálido - Rojizo </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma09"></ion-range>
+         </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide >
+      <ion-card>
+        <ion-card-header></ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-list-header><ion-label>Sintomatología (4 de 4)</ion-label></ion-list-header>
+
+            <ion-label> Ausencia de sed - Sed </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma10"></ion-range>
+
+            <ion-label> Piel Húmeda - Seca </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma11"></ion-range>
+
+            <ion-label> Fluidos Incolors - Oscuros </ion-label>
+            <ion-range min="-100" max="100" step="1" snaps="true" ticks="true"  name="perifl.sintoma12"></ion-range>
+         </ion-list>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <ion-title center><ion-icon name="thermometer-outline" ></ion-icon> 
+    Temperatura</ion-title>
+    <ion-range min="-100" max="100" step="1" snaps="true" ticks="true" disabled="true" name="temperatura"></ion-range>
+
+    <ion-title center> Equilibrio Naturaleza - Temperatura</ion-title>
+<ion-row>
+<ion-col><ion-label>M.E</ion-label>
+</ion-col>
+<ion-col><ion-label>E</ion-label>
+  </ion-col>
+  <ion-col><ion-label>N</ion-label>
+    
+    </ion-col>
+    <ion-col><ion-label>C</ion-label>
+    
+    </ion-col>
+    <ion-col><ion-label>M.C</ion-label>
+      </ion-col>
+</ion-row>
+<ion-row><ion-label>C  </ion-label>
+  <ion-col>
+  <ion-button color="warning">     </ion-button>
+  </ion-col>
+  <ion-col>
+    <ion-button color="warning">    </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button color="warning">    </ion-button>
+      </ion-col>
+      <ion-col>
+      <ion-button color="warning">    </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning">    </ion-button>
+        </ion-col>
+  </ion-row>
+<ion-row><ion-label>T  </ion-label>
+  <ion-col>
+  <ion-button color="warning">     </ion-button>
+  </ion-col>
+  <ion-col>
+    <ion-button color="warning">    </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button color="warning">    </ion-button>
+      </ion-col>
+      <ion-col>
+      <ion-button color="warning">    </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning">    </ion-button>
+        </ion-col>
+  </ion-row>
+  <ion-row><ion-label>N  </ion-label>
+    <ion-col>
+    <ion-button color="warning">      </ion-button>
+    </ion-col>
+    <ion-col>
+      <ion-button color="warning">    </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning">    </ion-button>
+        </ion-col>
+        <ion-col>
+        <ion-button color="warning">    </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="warning">    </ion-button>
+          </ion-col>
+    </ion-row>
+    <ion-row><ion-label>Fso</ion-label>
+      <ion-col>
+      <ion-button color="warning">     </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="warning">     </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="warning">    </ion-button>
+          </ion-col>
+          <ion-col>
+          <ion-button color="warning">    </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button color="warning">    </ion-button>
+            </ion-col>
+      </ion-row>
+      <ion-row><ion-label>F  </ion-label>
+        <ion-col>
+        <ion-button color="warning">     </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button color="warning">    </ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-button color="warning">    </ion-button>
+            </ion-col>
+            <ion-col>
+            <ion-button color="warning">    </ion-button>
+            </ion-col>
+            <ion-col>
+              <ion-button color="warning">    </ion-button>
+              </ion-col>
+        </ion-row>
+        <div class="ion-padding">
+        <ion-row><ion-text><h6>*Caliente, Templado, Neutro,Fresco, Frío</h6></ion-text></ion-row>
+        <ion-row><ion-text><h6>*Muy Expansivo, Expansivo, Neutro, Contractivo, Muy Contractivo</h6></ion-text></ion-row>
+      </div>
+      <ion-title> Sabor</ion-title>
+      <ion-row>
+        <ion-col></ion-col>
+        <ion-col><ion-img src="/assets/cilinder (1).svg"></ion-img></ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>umami</ion-col>
+        <ion-col>0.80%</ion-col>
+      </ion-row> 
+
+</ion-content>
+
+

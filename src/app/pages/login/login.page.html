@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Bienvenido/a</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <!--<form [formGroup]="todo" (ngSubmit)="logForm()"> -->
+ <ion-list>
+    <ion-item>
+      <ion-label position="floating">Usuario</ion-label> <!--position="fixed"/"stacked"/"floating"-->
+      <ion-input required maxlength=30 placeholder="Correo de usuario" [(ngModel)]="user.email" id="email" type="email" class="validate"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Contraseña</ion-label>
+      <ion-input required placeholder="Contraseña" [(ngModel)]="user.password" id="password" type="password" class="validate"></ion-input>
+    </ion-item>
+</ion-list>
+<span>{{errorMsg}}</span>
+<div class="div_centrado">
+<ion-button   color="warning" (click)="login()" type="submit" name="action">Enviar</ion-button> 
+</div>
+  <!--
+    
+    inputs con : formControlName="user" y formControlName="pass"
+    button con [disabled]="!todo.valid">Submit
+    </form>
+
+  <form name="loginForm">>
+    <p>
+    <md-input-container class="md-block" flex-gt-sm >
+      <label>Usuario</label>
+      <input md-maxlength="30" required name="usuario" placeholder="Nombre de usuario" value="Usuario" ng-model="vm.usuario.nombre" />
+      <div class="hint" ng-if="showHints">Introduce tu nombre de usuario</div> 
+      <div ng-messages="loginForm.name.$error" ng-if="!showHints">
+        <div ng-message="required">Campo necesario.</div>
+        <div ng-message="md-maxlength">El nombre tiene que tener 30 carácteres como máximo.</div>
+      </div>
+    </md-input-container>
+    
+  </p>
+  <p>
+    <md-input-container class="md-block" flex-gt-sm >
+        <label>Contraseña</label>
+        <input required placeholder="Contraseña" value="Password"  type="password" ng-model="vm.usuario.pass" />
+    </md-input-container>
+  </p>
+  </form>
+  <md-button class="md-icon-button" aria-label="Login" ng-click="vm.usuarioLogado=true;vm.menu=vm.menu_usuario;vm.redirect('perfil');">-->
+
+
+    <p>¿No tienes usuario aún? <a routerLink="/folder/Registro" routerDirection="root">Regístrate</a></p>
+
+    <a (click)="logout()" href="#">Logout</a>
+
+</ion-content>

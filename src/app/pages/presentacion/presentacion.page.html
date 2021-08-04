@@ -1,0 +1,26 @@
+
+<ion-content>
+
+  <p id="titulo">Macrobio</p>
+  <p id="subtitulo">tips</p>
+  
+  <div id="cuadro" class="cuadro">
+  <img src="/assets/icon/favicon.png" >
+  </div>
+
+  <div id="texto">
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide *ngFor='let item of textos'>
+      <ion-card>
+        <ion-card-content>
+        <p class="titular">{{item.titulo}}</p><hr>
+        <p class="subtitulo">{{item.subtitulo}}</p>
+      </ion-card-content>
+      </ion-card>
+        </ion-slide>
+    </ion-slides>
+  </div>
+ 
+  <ion-button class="ion-button-accede" color="warning" mode="md" routerLink="/folder/login" routerDirection="root" expand="block">ACCEDE</ion-button>
+  
+</ion-content>
