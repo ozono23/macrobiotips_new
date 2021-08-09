@@ -1,0 +1,101 @@
+<ion-toolbar>
+
+  <ion-title center>Mi perfil</ion-title>
+  <ion-buttons slot="end">
+    <ion-menu-button autoHide="false"></ion-menu-button>
+  </ion-buttons>
+</ion-toolbar>
+<ion-content>
+TEXTO PARA BUSCAR
+<p><input type="text" id="textoBusquedaAlimento"></p>
+<label>Tipos Subclasifi</label>
+<div class="input-field col s12">
+  <select  id="lalista">
+    <option value="{{dato.user}}" *ngFor="let dato of listaAlimentos">
+       {{dato.user}}
+   </option>
+  </select>
+
+</div>
+
+
+  <ion-button class="ion-button-accede" color="warning" mode="md" (click)="loadfood()" routerDirection="root" expand="block">Filtrar</ion-button>
+
+
+<!--<input type="text" id="password">
+<button (click)="login()">pulsa </button>
+<button (click)="loadfood()">cargar alimentos</button>
+
+
+-->
+
+
+  <div class="ion-padding">
+   <!-- <ion-button (click)="onClickDescargarDatos()">
+      Descargar datos
+    </ion-button>-->
+    <ion-list>
+      <ion-item *ngFor="let dato of luis" routerDirection="root" [routerLink]="['/folder/prueba-luis/alimento-detalle',dato.alimento_id]"> 
+        <ion-img [src]="dato.imagen1"></ion-img>
+      <!--  <ion-button color="danger"  (click)="comprobarBoton(dato.user)"  clear>Light Clear</ion-button>-->
+        <p>&nbsp;&nbsp;{{ dato.user }}</p>
+        <p>&nbsp;&nbsp;{{ dato.partes }}</p>
+       <!-- <ion-icon name="add-circle" slot="end" item-start></ion-icon>-->
+      </ion-item>
+    </ion-list>
+  </div>
+</ion-content>
+
+
+
+
+
+
+
+
+<!--
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-header>
+      hola madrid
+    </ion-card-header>
+    
+    <ion-list>
+      <button ion-item>
+      <ion-icon name="cart" item-start></ion-icon>
+      Shopping
+    </button>
+    </ion-list>
+  
+  </ion-card>
+</ion-content>
+
+
+
+<ion-list>
+  <ion-item>
+    <ion-label>Input</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-button><ion-icon name="cart" item-start></ion-icon></ion-button>
+   
+    <ion-label>Toggle</ion-label>
+    <ion-toggle slot="end"></ion-toggle>
+    <ion-button><ion-icon name="cart" item-start></ion-icon></ion-button>
+   
+  </ion-item>
+  <ion-item>
+    <ion-label>Radio</ion-label>
+    <ion-radio slot="end"></ion-radio>
+  </ion-item>
+  <ion-item>
+    <ion-label>Checkbox</ion-label>
+    <ion-checkbox slot="start"></ion-checkbox>
+  </ion-item>
+</ion-list>
+
+-->
+
+
