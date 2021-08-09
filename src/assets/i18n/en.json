@@ -1,5 +1,34 @@
 {
-    "app-name":"Macrobiotips"
+    "app":""
+    , "accept":"Accept"
+    , "cancel":"Cancel"
+    , "close":"Close"
+    , "save":"Save"
+    , "delete":"Delete"
+    , "update":"Update"
+    , "logout":"Logout"
+    , "email":"Email"
+    , "name":"Name"
+    , "search":"Search"
+    , "lastname":"Last name"
+    , "birth":"Birth Date"
+    , "password":"Password"
     ,"wellcome":"Wellcome"
     ,"":""
+    , "err": {
+        "":""
+        , "":""
+    }
+    , "succ": {
+        "":""
+        , "":""
+    }
+    , "modal-header": {
+        "":""
+        , "":""
+    }
+    , "modal-body": {
+        "":""
+        , "":""
+    }
 }
