@@ -16,7 +16,9 @@ var users = [
   new User('usuario1@gmail.com','456')
 ];
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class LoginService {
 
   public logado:boolean;

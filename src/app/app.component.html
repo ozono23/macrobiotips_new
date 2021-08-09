@@ -1,3 +1,28 @@
-<ion-app>
-  <ion-router-outlet></ion-router-outlet>
-</ion-app>
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-content>
+    <ion-list id="menu-list" *ngIf="!_service.checkCredentials()">
+      <ion-list-header>Macrobiotips</ion-list-header>
+      <ion-note>hi@eatwellbyseason.com</ion-note> <!--Poner aquí usuario logado-->
+
+      <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; let i = index">
+        <ion-item  (click)="selectedIndex = i" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == i">
+          <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+          <ion-label>{{ p.title }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+
+    <ion-list id="menulogged-list" *ngIf="_service.checkCredentials()">
+      <ion-list-header ><ion-button (click)="_service.logout()">Logout</ion-button></ion-list-header>
+
+      <ion-menu-toggle auto-hide="false" *ngFor="let p of appPagesLogged; let n = index">
+        <ion-item (click)="selectedIndex = n" routerDirection="root" [routerLink]="[p.url]" lines="none" detail="false" [class.selected]="selectedIndex == n">
+          <ion-icon slot="start" [ios]="p.icon + '-outline'" [md]="p.icon + '-sharp'"></ion-icon>
+          <ion-label>{{ p.title }}</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<ion-router-outlet id="main"></ion-router-outlet>
