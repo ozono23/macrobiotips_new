@@ -17,8 +17,6 @@ private _http : HttpClient
       textoBusquedaAlimento : user,
       password : password
     })
-
-    
   }
 
   
