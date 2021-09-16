@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
-import {ApiService} from '../../services/api.service';
+import {ApiService} from '../../../services/api.service';
 
 import { FnParam } from '@angular/compiler/src/output/output_ast';
 import { stringify } from 'querystring';
