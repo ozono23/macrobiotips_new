@@ -1,0 +1,18 @@
+.table-panel {
+    height: 370px;
+    width: 100%;
+    background: #F8FDFF;
+    border-radius: 0 0 12px 12px;
+    
+    .header {
+        padding: 30px;
+        display: flex;
+        justify-content: space-between;
+
+        .table-title {
+            font-family: 'muli';
+            font-weight: bold;
+            font-size: 20px;
+        }
+    }
+}

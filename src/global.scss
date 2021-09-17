@@ -51,7 +51,19 @@ P {
     margin: auto;
 }
 
-span{
+.box {
+    background: #F8FDFF;
+    border-radius: 12px;
+    padding: 0 15px;
+    --padding: 0 15px;
+    min-height: 47px;
+    &.btn{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+div, span{
     font-family: 'Noto Sans', sans-serif;
     font-size: 14px;
     color: #3F3F37;
@@ -64,11 +76,14 @@ span{
 }
 
 ion-button {
-    --background: #FFAA00;
+    --box-shadow:none;
     --color: #F8FDFF;
+    --border-radius: 12px;
     font-size: 15px;
     font-family: 'Noto Sans', sans-serif;
     font-weight: bold;
+    width: 166px;
+    height: 47px;
 }
 
 // .middle{
@@ -96,7 +111,7 @@ ion-button {
 //     width: 50%;
 // }
 
-a, .click{
+a, .click, .btn{
     cursor: pointer;
 }
 

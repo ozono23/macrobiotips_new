@@ -1,0 +1,13 @@
+.selectors-container {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    div {
+        margin: 10px 10px 0 10px;
+    }
+}
+
+.start-btn-wrapper{
+    text-align: center;
+    margin-top: 15px;   
+}
