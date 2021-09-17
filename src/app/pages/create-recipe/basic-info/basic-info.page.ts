@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { enterAnimation, leaveAnimation } from 'src/app/animations/selector';
+import { SelectorComponent } from 'src/app/components/selector/selector.component';
+
 
 @Component({
   selector: 'app-basic-info',
@@ -7,9 +11,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicInfoPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    private modalCtrl:ModalController,
+  ) { }
 
   ngOnInit() {
+    this.modalCtrl
+  .create({
+    component: SelectorComponent,
+    enterAnimation: enterAnimation,
+    leaveAnimation: leaveAnimation,
+  })
+  .then((modal) => {
+    modal.present();
+  });
   }
 
 }
