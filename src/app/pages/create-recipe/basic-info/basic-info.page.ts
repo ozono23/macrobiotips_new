@@ -25,7 +25,7 @@ export class BasicInfoPage implements OnInit {
 
   ngOnInit() {
     this.recipe = this.sessionSvc.recipe;
-
+    this.recipe.people = 1;
   }
 
   async selectRecipeTime(){

@@ -97,22 +97,23 @@ ion-button {
     }
 }
 
+.center{
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    &.center{
+        justify-content: center;
+        align-items: center;        
+    }
+}
+
 // .middle{
 //     display: grid;
 //     place-items: center;
 //     align-content: center;
 //     height: 100%;
-// }
-
-// .flex{
-//     display: flex;
-//     &.center{
-//         align-items: center;
-//     }
-// }
-
-// .center{
-//     text-align: center;
 // }
 
 // .full {
