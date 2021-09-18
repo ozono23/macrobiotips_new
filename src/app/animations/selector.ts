@@ -41,8 +41,8 @@ export const leaveAnimation = (baseEl: HTMLElement): Animation => {
   wrapperAnimation
     .addElement(wrapperEl)
     .keyframes([
-      { offset: 0, opacity: 0.2, transform: 'translateX(0px)' },
-      { offset: 1, opacity: 1, transform: 'translateX(100%)' }
+      { offset: 0, opacity: 1, transform: 'translateX(0px)' },
+      { offset: 1, opacity: 0.2, transform: 'translateX(100%)' }
     ]);
 
   return baseAnimation

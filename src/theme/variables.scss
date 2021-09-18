@@ -48,36 +48,34 @@
   --ion-color-danger-shade: #cf3c4f;
   --ion-color-danger-tint: #ed576b;
 
-  /** dark **/
-  --ion-color-dark: #222428;
-  --ion-color-dark-rgb: 34, 36, 40;
+  --ion-color-dark: #262626;
+  --ion-color-dark-rgb: 38,38,38;
   --ion-color-dark-contrast: #ffffff;
-  --ion-color-dark-contrast-rgb: 255, 255, 255;
-  --ion-color-dark-shade: #1e2023;
-  --ion-color-dark-tint: #383a3e;
+  --ion-color-dark-contrast-rgb: 255,255,255;
+  --ion-color-dark-shade: #212121;
+  --ion-color-dark-tint: #3c3c3c;
 
-  /** medium **/
-  --ion-color-medium: #92949c;
-  --ion-color-medium-rgb: 146, 148, 156;
-  --ion-color-medium-contrast: #ffffff;
-  --ion-color-medium-contrast-rgb: 255, 255, 255;
-  --ion-color-medium-shade: #808289;
-  --ion-color-medium-tint: #9d9fa6;
+  --ion-color-medium: #E2E8EA;
+  --ion-color-medium-rgb: 226,232,234;
+  --ion-color-medium-contrast: #000000;
+  --ion-color-medium-contrast-rgb: 0,0,0;
+  --ion-color-medium-shade: #c7ccce;
+  --ion-color-medium-tint: #e5eaec;
 
-  /** light **/
-  --ion-color-light: #f4f5f8;
-  --ion-color-light-rgb: 244, 245, 248;
+  --ion-color-light: #F8FDFF;
+  --ion-color-light-rgb: 248,253,255;
   --ion-color-light-contrast: #000000;
-  --ion-color-light-contrast-rgb: 0, 0, 0;
-  --ion-color-light-shade: #d7d8da;
-  --ion-color-light-tint: #f5f6f9;
+  --ion-color-light-contrast-rgb: 0,0,0;
+  --ion-color-light-shade: #dadfe0;
+  --ion-color-light-tint: #f9fdff;
 }
 
+/*
 @media (prefers-color-scheme: dark) {
-  /*
-   * Dark Colors
-   * -------------------------------------------
-   */
+
+   // Dark Colors
+   // -------------------------------------------
+
 
   body {
     --ion-color-primary: #428cff;
@@ -144,10 +142,8 @@
     --ion-color-light-tint: #383a3e;
   }
 
-  /*
-   * iOS Dark Theme
-   * -------------------------------------------
-   */
+   // iOS Dark Theme
+   // -------------------------------------------
 
   .ios body {
     --ion-background-color: #000000;
@@ -188,10 +184,8 @@
   }
 
 
-  /*
-   * Material Design Dark Theme
-   * -------------------------------------------
-   */
+   // Material Design Dark Theme
+   // -------------------------------------------
 
   .md body {
     --ion-background-color: #121212;
@@ -231,3 +225,4 @@
     --ion-card-background: #1e1e1e;
   }
 }
+  */

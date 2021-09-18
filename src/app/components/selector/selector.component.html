@@ -1,3 +1,16 @@
-<p>
-  selector works!
-</p>
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-icon name="arrow-back-outline" class="dismiss-btn" (click)="modalCtr.dismiss()"></ion-icon>
+
+    <ion-title>{{header}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="light">
+
+  <span class="sel-title">{{(prefix+'title') | translate}}</span>
+  <div class="space"></div>
+  <div class="options">
+    <div class="option" *ngFor="let option of options" [innerHTML]="(prefix+option) | translate" (click)="select(option)"></div>
+  </div>
+</ion-content>

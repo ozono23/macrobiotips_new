@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-selector',
@@ -7,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SelectorComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public modalCtr:ModalController
+  ) { }
+
+  options:any;
+  header:string;
+  prefix:string;
 
   ngOnInit() {}
+
+  select(option:any){
+    this.modalCtr.dismiss(option);
+  }
 
 }

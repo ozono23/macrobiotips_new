@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { enterAnimation, leaveAnimation } from 'src/app/animations/selector';
 import { SelectorComponent } from 'src/app/components/selector/selector.component';
+import { RecipeTime } from 'src/app/enums/recipe-time';
+import { ModalsService } from 'src/app/services/modals.service';
 
 
 @Component({
@@ -12,19 +14,15 @@ import { SelectorComponent } from 'src/app/components/selector/selector.componen
 export class BasicInfoPage implements OnInit {
 
   constructor(
-    private modalCtrl:ModalController,
+    private modalSvc:ModalsService,
   ) { }
 
   ngOnInit() {
-    this.modalCtrl
-  .create({
-    component: SelectorComponent,
-    enterAnimation: enterAnimation,
-    leaveAnimation: leaveAnimation,
-  })
-  .then((modal) => {
-    modal.present();
-  });
+
+  }
+
+  async selectRecipeTime(){
+    console.log(await this.modalSvc.selector(RecipeTime.getList(), 'recipeTime'));
   }
 
 }

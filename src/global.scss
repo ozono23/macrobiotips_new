@@ -39,7 +39,7 @@ ion-title {
 }
 
 ion-content {
-    --background: #E2E8EA;
+    --background: var(--ion-color-medium);
 }
 
 P {
@@ -76,6 +76,7 @@ div, span{
     }
 }
 
+
 ion-button {
     --box-shadow:none;
     --color: #F8FDFF;
@@ -85,6 +86,15 @@ ion-button {
     font-weight: bold;
     width: 166px;
     height: 47px;
+}
+
+.option{
+    .col1{
+        width: 90px
+    }
+    .col2{
+        font-weight: bold;
+    }
 }
 
 // .middle{
