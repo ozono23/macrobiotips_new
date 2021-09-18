@@ -17,13 +17,21 @@
     ,"":""
     , "recipeTime": {
         "title":"Horario de Receta"
+        , "1":"Desayuno"
+        , "2":"Comida"
+        , "3":"Merienda"
+        , "4":"Cena"
+    }
+    , "recipeTimeModal": {
+        "title":"Horario de Receta"
         , "1":"<div class='col1'>Desayuno</div><div class='col2'>6:00-11:00</div>"
         , "2":"<div class='col1'>Comida</div><div class='col2'>12:00-15:00</div>"
         , "3":"<div class='col1'>Merienda</div><div class='col2'>16:00-18:00</div>"
         , "4":"<div class='col1'>Cena</div><div class='col2'>18:00-24:00</div>"
     }
     , "recipeType": {
-        "1":"Entrante"
+        "title":"Tipo de Receta"
+        , "1":"Entrante"
         , "2":"Plato principal"
         , "3":"Postre"
     }

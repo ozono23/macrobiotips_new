@@ -3,7 +3,10 @@ import { ModalController } from '@ionic/angular';
 import { enterAnimation, leaveAnimation } from 'src/app/animations/selector';
 import { SelectorComponent } from 'src/app/components/selector/selector.component';
 import { RecipeTime } from 'src/app/enums/recipe-time';
+import { RecipeType } from 'src/app/enums/recipe-type';
+import { Recipe } from 'src/app/models/recipe';
 import { ModalsService } from 'src/app/services/modals.service';
+import { SessionService } from 'src/app/services/session.service';
 
 
 @Component({
@@ -15,14 +18,28 @@ export class BasicInfoPage implements OnInit {
 
   constructor(
     private modalSvc:ModalsService,
+    private sessionSvc:SessionService,
   ) { }
 
+  recipe:Recipe
+
   ngOnInit() {
+    this.recipe = this.sessionSvc.recipe;
 
   }
 
   async selectRecipeTime(){
-    console.log(await this.modalSvc.selector(RecipeTime.getList(), 'recipeTime'));
+    this.recipe.time  = await this.modalSvc.selector(RecipeTime.getList(), 'recipeTimeModal', this.recipe.title);
+  }
+
+  async selectRecipeType(){
+    this.recipe.type  = await this.modalSvc.selector(RecipeType.getList(), 'recipeType', this.recipe.title);
+  }
+
+
+  start(){
+    console.log(this.sessionSvc.recipe);
+    
   }
 
 }

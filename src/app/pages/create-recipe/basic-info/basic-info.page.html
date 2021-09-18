@@ -4,15 +4,15 @@
    
      <div class="selectors-container">
        <div>
-         <ion-input type="text" placeholder="Nombre" class="box"></ion-input>
+         <ion-input type="text" placeholder="Nombre" class="box" [(ngModel)]="recipe.title" name="title"></ion-input>
        </div>
        <div></div>
        <div class="box btn" (click)="selectRecipeTime()">
-         <span>Horario de Receta</span>
+         <span>{{recipe.time | default:'recipeTime' | translate}}</span>
          <ion-icon name="chevron-forward-outline"></ion-icon>
        </div>
-       <div class="box btn">
-         <span>Tipo de Receta</span>
+       <div class="box btn" (click)="selectRecipeType()">
+         <span>{{recipe.type | default:'recipeType' | translate}}</span>
          <ion-icon name="chevron-forward-outline"></ion-icon>      
        </div>
      </div>

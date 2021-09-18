@@ -5,6 +5,7 @@ import { ShowHidePasswordComponent } from '../components/show-hide-password/show
 import { IonicModule } from '@ionic/angular';
 import { TableComponent } from '../components/table/table.component';
 import { SelectorComponent } from '../components/selector/selector.component';
+import { DefaultPipe } from '../pipes/default.pipe';
 
 
 
@@ -13,17 +14,19 @@ import { SelectorComponent } from '../components/selector/selector.component';
     ShowHidePasswordComponent
     , TableComponent
     , SelectorComponent
+    , DefaultPipe
   ],
   imports: [
-    CommonModule,
-    TranslateModule,
-    IonicModule
+    CommonModule
+    , TranslateModule
+    , IonicModule
   ],
   exports: [
     TranslateModule
     , ShowHidePasswordComponent
     , TableComponent
     , SelectorComponent
+    , DefaultPipe
   ]
 })
 export class SharedModule { }
